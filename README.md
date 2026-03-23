@@ -1,14 +1,17 @@
 # Map_Chat_Nexus
  Geospatial Real-Time Communication PlatformMap-Chat Nexus is a location-aware full-stack web application designed to bridge the gap between physical proximity and digital interaction. Unlike traditional social media, this platform allows users to instantly connect in "Digital Town Squares" based on their real-time GPS coordinates without needing pre-existing contact information.
  
- 📌 Project Overview
+ 📌 Project Overview: 
+ 
  In high-density environments like university campuses or large-scale conclaves (e.g., VCC-2026), information silos often prevent efficient coordination. Map-Chat Nexus solves this by using geospatial indexing to create transient, location-based chat zones.Problem Statement: Modern social platforms are identity-based, requiring "follows" or "invites," which creates friction for spontaneous local coordination and real-time event management.Solution: A "Location-as-an-Identity" model that uses Spring Boot, PostGIS, and WebSockets to enable secure, proximity-triggered messaging.
  
- 🏗 System Architecture
+ 🏗 System Architecture: 
+ 
  The project follows a decoupled Client-Server Architecture optimized for high-concurrency geospatial updates:Frontend (Presentation Layer): A React-based SPA that renders an interactive map using Leaflet.js, handling real-time user marker updates via WebSockets.Backend (Service Layer): A Spring Boot application managing RESTful APIs for authentication and a WebSocket broker for low-latency message routing.Database (Persistence Layer): PostgreSQL with the PostGIS extension for spatial queries (ST_DWithin) and Redis for ephemeral location caching.Security Layer: Implements JWT (JSON Web Tokens) and server-side Coordinate Fuzzing to ensure user privacy.
  
-🛠 Tech Stack
-LayerTechnologyFrontendReact.js, Next.js, Leaflet.js, Tailwind CSSBackendJava, Spring Boot, Spring Security (JWT), WebSocketsDatabasePostgreSQL + PostGIS, RedisDevOpsDocker, Docker Compose, Garuda LinuxTestingPostman, JMeter (Performance Testing)
+🛠 Tech Stack: 
+
+Frontend: React.js, Next.js, Leaflet.js, Tailwind CSS; Backend: Java, Spring Boot, Spring Security (JWT), WebSockets; Database: PostgreSQL + PostGIS, RedisDevOpsDocker, Docker Compose; Testing: Postman, JMeter (Performance Testing)
 
 🧩 Modules
   1. User Management
